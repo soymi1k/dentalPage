@@ -209,7 +209,7 @@ body {
 .time {
   margin-left: 5px;
 }
-.timem dt {
+.time dt {
   float: left;
   font-size: 27px;
   font-weight: 600;
@@ -231,11 +231,11 @@ body {
 }
 .list dt {
   float: left;
-  font-size: 27px;
+  font-size: 20px;
   font-weight: 600;
   width: 5em;
 }
 
 .list dd {
-  font-size: 27px;
+  font-size: 20px;
 }
