@@ -1,75 +1,15 @@
 /* ANIMATION */
-@keyframes rolling {
-  0% {
-    transform: translateY(0);
-  }
-  25% {
-    transform: translateY(-20%);
-  }
-  50% {
-    transform: translateY(-40%);
-  }
-  75% {
-    transform: translateY(-60%);
-  }
-  100% {
-    transform: translateY(-80%);
-  }
-}
-/* css reset */
-body,
-h1,
-h2,
-h3,
-h4,
-p,
-ul,
-dl,
-dd {
-  margin: 0;
-  padding: 0;
-}
-li {
-  list-style-type: none;
-}
-
-h1,
-h2,
-h3,
-h4 {
-  font-size: 100%;
-  font-weight: normal;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-/* css reset */
+@import url("reset.css");
+@import url("profile-header.css");
+@import url("profile-section.css");
 
 body {
   background-color: #fff;
   color: #111;
   font-family: "Nanum Gothic", sans-serif;
-}
-/* .menuBar {
-  position: fixed;
-  margin-top: 30;
-  width: 100%;
-  background-color: #333;
-  height: 2.75em;
-}
-.meleft {
+  max-width: 800px;
+  margin: 0 auto;
   display: block;
-}
-.meimg {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  height: 2em;
-} */
-.greeting {
-  font-size: 2rem;
 }
 .portrait {
   background-image: url(images/portrait_name.png);
@@ -77,179 +17,30 @@ body {
   background-position: center;
   padding-top: 56.25%; /* 16:9 (9/16) */
 }
-.doc-portrait {
-  background-image: url(images/portrait.jpeg);
-  background-size: cover;
-  /* background-position: center; */
-  padding-top: 66.66%;
-}
-
 .profile {
   padding: 7%;
   min-height: 5000px;
 }
+.greeting {
+  font-size: 2rem;
+}
+
 .profile-header,
 .profile-section {
   padding-bottom: 7%; /* section간 간격 */
 }
-.profile-section h2 {
-  text-align: center;
-  font-size: 3rem;
-  font-weight: 600;
-  letter-spacing: 14px;
-  border-top: 3px solid;
-  /* margin-bottom: 20px; */
-  padding: 0.5em 0; /* vertical horizon */
-  /* color: orangered; */
-  position: sticky;
-  top: 0;
-  margin-left: 5px;
-  background-color: #fff;
-  box-shadow: 0 0 40px 5px #fff;
-}
-.profile-section h3 {
-  font-size: 1.7rem;
-  text-align: center;
-  letter-spacing: 3px;
-  margin-top: 7px;
-  margin-bottom: 50px;
-}
-.name {
-  font-size: 3rem;
-  line-height: 1.5;
-  margin-bottom: 30px;
-  margin-bottom: 40px;
-  position: sticky;
-  top: -1.75em;
-  background-color: #fff;
-  box-shadow: 0 0 40px 5px #fff;
-}
 
-.motto {
-  display: inline-block;
-  color: black;
-  font-weight: 600;
-  vertical-align: top;
-  height: 1.75em; /* .name에서 상속받음 */
-  overflow: hidden;
-  padding-right: 0.5em;
-  position: relative;
-}
-.motto::after {
-  content: " ";
-  position: absolute;
-  left: 0;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  /* border: 1px solid red; */
-  margin-left: -1em;
-  box-shadow: inset 0 0 10px 10px #fff; /* 안쪽 x y blur spread color */
-}
-.motto-list {
-  /* margin-top: -1em; .name에서 상속받음 */
-  animation-name: rolling;
-  animation-duration: 10s;
-  animation-iteration-count: infinite;
-  animation-direction: reverse;
-}
-
-.name-title {
-  font-size: 1.5em; /* .name에서 상속받음 (x1.5) */
-  line-height: 1;
-  font-weight: 600;
-  color: #1069c9ff;
-  /* margin-left: ; */
-  position: relative; /* position이 static이 아닌 항목은 최상위 레이어가 된다 */
-}
-.doc-por {
-  width: 40%;
-  display: block;
-  margin: 0 auto;
-}
 /* .icons {
 }
 
 .icons a.twitter {
 } */
-.timeline-div h3 {
-  font-size: 2.4rem;
-  font-weight: 600;
-  letter-spacing: 15px;
-  color: black;
-  text-align: center;
-  margin-top: 28px;
-  margin-left: 20px;
-  margin-bottom: 7px;
-}
-.timeline-div h4 {
-  text-align: center;
-  margin-left: 20px;
-  font-size: 2rem;
-  font-weight: 600;
-  letter-spacing: 15px;
-  margin-bottom: 7px;
-  color: #1069c9ff;
-}
-.timeline-div p {
-  text-align: center;
-  font-size: 1.7rem;
-  letter-spacing: 2.5px;
-  margin-bottom: 30px;
-}
 
-.timeline li {
-  padding-bottom: 5px;
-  font-size: 20px;
-  font-family: "Gothic A1", sans-serif;
-  text-align: center;
-}
-.timeline li:last-child {
-  padding-bottom: 0;
-}
-.procedure h3:first-child {
-  margin-top: 50px;
-}
-/* .time {
-  margin-left: 5px;
-} */
-.time,
-.contact {
-  margin-left: 10px;
-}
-.time dt {
-  font-size: 2rem;
-  float: left;
-  font-weight: 600;
-  width: 5em;
-}
-.time span {
-  font-size: 1.4rem;
-}
-.time dd {
-  font-size: 2rem;
-}
-.time p {
-  font-size: 1.6rem;
-  text-align: right;
-  margin-top: 20px;
-  color: #1069c9ff;
-}
-.time p span {
-  font-size: 2rem;
-  font-weight: 600;
-}
-.list dt {
-  float: left;
-  font-size: 17px;
-  font-weight: 600;
-  width: 5em;
-}
-
-.list dd {
-  font-size: 17px;
-}
 #map {
   margin-top: 30px;
   display: block;
+}
+@media (min-width: 768px) {
+  div {
+  }
 }

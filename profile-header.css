@@ -1,0 +1,66 @@
+@keyframes rolling {
+  0% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(-20%);
+  }
+  50% {
+    transform: translateY(-40%);
+  }
+  75% {
+    transform: translateY(-60%);
+  }
+  100% {
+    transform: translateY(-80%);
+  }
+}
+
+.name {
+  font-size: 30px;
+  line-height: 1.75;
+  margin-bottom: 30px;
+  margin-bottom: 40px;
+  position: sticky;
+  top: -1.75em;
+  background-color: #fff;
+  box-shadow: 0 0 40px 5px #fff;
+}
+.motto {
+  display: inline-block;
+  color: black;
+  font-weight: 600;
+  vertical-align: top;
+  height: 1.75em; /* .name에서 상속받음 */
+  overflow: hidden;
+  padding-right: 0.5em;
+  position: relative;
+}
+.motto-list {
+  /* margin-top: -1em; .name에서 상속받음 */
+  animation-name: rolling;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-direction: reverse;
+}
+.motto::after {
+  content: " ";
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  /* border: 1px solid red; */
+  margin-left: -1em;
+  box-shadow: inset 0 0 10px 10px #fff; /* 안쪽 x y blur spread color */
+}
+
+.name-title {
+  font-size: 1.5em; /* .name에서 상속받음 (x1.5) */
+  line-height: 0.7;
+  font-weight: 600;
+  margin-left: -0.05em;
+  color: #1069c9ff;
+  /* margin-left: ; */
+  position: relative; /* position이 static이 아닌 항목은 최상위 레이어가 된다 */
+}
