@@ -19,12 +19,12 @@
 .name {
   font-size: 30px;
   line-height: 1.75;
-  margin-bottom: 30px;
-  margin-bottom: 40px;
-  position: sticky;
+  margin-bottom: 80px;
+  /* position: sticky; */
   top: -1.75em;
   background-color: #fff;
   box-shadow: 0 0 40px 5px #fff;
+  padding-bottom: 20px;
 }
 .motto {
   display: inline-block;
@@ -56,11 +56,30 @@
 }
 
 .name-title {
-  font-size: 1.5em; /* .name에서 상속받음 (x1.5) */
+  font-size: 2.5em; /* .name에서 상속받음 (x1.5) */
   line-height: 0.7;
   font-weight: 600;
   margin-left: -0.05em;
+  padding-top: 10px;
   color: #1069c9ff;
   /* margin-left: ; */
   position: relative; /* position이 static이 아닌 항목은 최상위 레이어가 된다 */
+}
+.greeting {
+  font-size: 2em;
+  line-height: 1.5;
+  letter-spacing: 1.5px;
+}
+
+profile-header {
+  border: 1px solid red;
+}
+@media screen and (max-width: 750px) {
+  .name {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+  .greeting {
+    font-size: 1.15em;
+  }
 }

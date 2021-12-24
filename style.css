@@ -1,28 +1,28 @@
 /* ANIMATION */
+@import url("toolreset.css");
 @import url("reset.css");
 @import url("profile-header.css");
 @import url("profile-section.css");
+@import url("https://fonts.googleapis.com/css2?family=Gothic+A1:wght@100&family=Nanum+Gothic:wght@400;700;800&family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap");
 
 body {
   background-color: #fff;
   color: #111;
-  font-family: "Nanum Gothic", sans-serif;
-  max-width: 800px;
+  font-family: "Noto Sans KR", sans-serif;
   margin: 0 auto;
   display: block;
 }
 .portrait {
+  background-repeat: no-repeat;
   background-image: url(images/portrait_name.png);
-  background-size: cover;
+  background-color: #eeeffd;
+  background-size: 75%;
   background-position: center;
-  padding-top: 56.25%; /* 16:9 (9/16) */
+  padding: 20%;
 }
 .profile {
   padding: 7%;
   min-height: 5000px;
-}
-.greeting {
-  font-size: 2rem;
 }
 
 .profile-header,
@@ -37,10 +37,16 @@ body {
 } */
 
 #map {
+  z-index: -1;
   margin-top: 30px;
   display: block;
 }
-@media (min-width: 768px) {
-  div {
+@media screen and (max-width: 1000px) {
+}
+@media screen and (max-width: 750px) {
+  .portrait {
+    background-size: 100%;
+    background-position: center;
+    padding: 25%;
   }
 }
