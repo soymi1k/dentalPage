@@ -76,7 +76,7 @@ profile-header {
 }
 @media screen and (max-width: 750px) {
   .name {
-    font-size: 20px;
+    font-size: 16px;
     margin-bottom: 20px;
   }
   .greeting {
