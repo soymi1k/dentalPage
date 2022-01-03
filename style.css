@@ -9,8 +9,45 @@ body {
   background-color: #fff;
   color: #111;
   font-family: "Noto Sans KR", sans-serif;
-  margin: 0 auto;
-  display: block;
+}
+nav i {
+  font-size: 1.5rem;
+}
+.navBox {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 16px;
+}
+nav img {
+  width: 40px;
+}
+.menuBox ul {
+  margin: 8px 18px;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  padding: 12px;
+}
+.menuBox {
+  display: none;
+}
+.menuBox.active {
+  display: flex;
+  justify-content: center;
+}
+nav li {
+  padding: 8px 16px;
+  width: 100%;
+  text-align: center;
+}
+nav li:hover {
+  background-color: rgba(29, 29, 29, 0.6);
+  border-radius: 4px;
+}
+.kakao {
+  background: #f9e000;
 }
 .portrait {
   background-repeat: no-repeat;
