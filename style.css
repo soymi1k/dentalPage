@@ -46,8 +46,27 @@ nav li:hover {
   background-color: rgba(29, 29, 29, 0.6);
   border-radius: 4px;
 }
-.kakao {
+.kakao_banner {
   background: #f9e000;
+}
+.kakao-item {
+  display: flex;
+  align-items: center;
+  padding: 4vw 8vw;
+  justify-content: space-between;
+}
+.kakao-item header {
+  font-size: 4.5vw;
+  font-weight: 500;
+}
+.kakao-item .fa-comment {
+  font-size: 17vw;
+}
+.kakao-item p {
+  margin-top: 0.5rem;
+  font-size: 4.5vw;
+  font-weight: 300;
+  /* border-bottom: 2px solid black; */
 }
 .portrait {
   background-repeat: no-repeat;
